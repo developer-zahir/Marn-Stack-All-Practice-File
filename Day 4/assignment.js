@@ -9,12 +9,12 @@ function age_checker(age = 0) {
     } else if (age <= 12) {
         message = " Childeren 👶";
     } else if (age <= 19) {
-        message = "Teenagers 👦";
+        message = "Teenagers 
     } else if (age <= 35) {
-        message = "Young people 👨";
+        message = "Young people 👨" 
     } else {
         message = "Old people  🧓 ";
-    }
+
     return message;
 }
 console.log(age_checker(20));
