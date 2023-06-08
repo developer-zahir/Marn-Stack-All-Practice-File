@@ -1,93 +1,49 @@
-// day 6 part 6 sesher dike................
-const students = [
-  {
-    id: 1,
-    name: "Nusrat",
-    age: 5,
-    location: "Mirpur",
-    gender: "Female",
-    isMarried: false,
-    fev_movies: ["KGF", "Pathan", "Pushpa"],
-    result: {
-      ban: 60,
-      eng: 80,
-      scingce: 70,
-      social_scienc: 56,
-      reli: 55,
-    },
-  },
-  {
-    id: 2,
-    name: "Imrn",
-    age: 20,
-    location: "Kalaiya",
-    gender: "Male",
-    isMarried: false,
-    fev_movies: ["Avatar", "Pathan", "Titanic"],
-    result: {
-      ban: 50,
-      eng: 70,
-      scingce: 66,
-      social_scienc: 76,
-      reli: 85,
-    },
-  },
-  {
-    id: 3,
-    name: "Sakib",
-    age: 30,
-    location: "Madanpura",
-    gender: "Male",
-    isMarried: true,
-    fev_movies: ["Avatar", "Amma jaan", "Jannat"],
-    result: {
-      ban: 50,
-      eng: 70,
-      scingce: 66,
-      social_scienc: 76,
-      reli: 85,
-    },
-  },
-];
+// // day 6 part 4
+// const food = ["alo", "potol", "lao", "kumra"];
+// // // print each food item using forEach loop
+// // food.forEach((foodItem) => {
+// //   console.log(foodItem);
+// // });
 
-function get_gpa(mark = 0) {
-  let gpa;
-  let great;
-  if (mark >= 0 && mark < 33) {
-    gpa = 0;
-    great = "F";
-  } else if (mark >= 33 && mark < 40) {
-    gpa = 1;
-    great = "D";
-  } else if (mark >= 40 && mark < 50) {
-    gpa = 2;
-    great = "C";
-  } else if (mark >= 50 && mark < 60) {
-    gpa = 3;
-    great = "B";
-  } else if (mark >= 60 && mark < 70) {
-    gpa = 3.5;
-    great = "A-";
-  } else if (mark >= 70 && mark < 80) {
-    gpa = 4;
-    great = "A";
-  } else if (mark >= 80 && mark <= 100) {
-    gpa = 4.5;
-    great = "A+";
-  } else {
-    gpa = "invalid";
-    great = "invalid";
-  }
-  return {
-    gpa: gpa,
-    great: great,
-  };
+// // // print each food item using for loop
+// // for (foodItem in food) {
+// //   console.log(food[foodItem]);
+// // }
+
+// // // another way
+// // for (foodItem in food) {
+// //   console.log(`${foodItem}. ${food[foodItem]}`);
+// // }
+// // for of loop, only for value
+// for(foodItem of food){
+//     console.log(foodItem);
+// }
+
+
+
+// const persone = {
+//   name: "zahirul",
+//   age: 30,
+//   skill: "MERN",
+// };
+
+// for (data in persone) {
+//   console.log(data);
+// }
+
+
+
+const persone = {
+  name: "zahirul",
+  age: 30,
+  skill: "MERN",
+};
+
+for (data of persone) {
+  console.log(data);
 }
 
-students.forEach((item) => {
-  console.log(
-    `Name: ${item.name}, Bangla Mark: ${item.result.ban},  GPA: ${get_gpa(item.result.ban).gpa} and Great: ${
-      get_gpa(item.result.ban).great
-    }`
-  );
-});
+
+// For in loop with array and Array এর ক্ষেত্রে, for in loop  দিয়ে  index  এবং value   শো করাতে পারি,  কিন্তু অবজেক্টের ক্ষেত্রে for in loop  শুধুমাত্র key  গুলো দিয়ে থাকে। 
+
+// Array এর ক্ষেত্রে, for of loop  দিয়ে শুধুমাত্র  value গুলো  শো করাতে পারি, কিন্তু অবজেক্টের ক্ষেত্রে for of loop  কাজ করে না। 
