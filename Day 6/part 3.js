@@ -62,8 +62,9 @@ const students = [
 // });
 
 // Print names of people who are 30 years old
-students.map((persone) => {
-  if (persone.age >= 30) {
-    console.log(`Student name: ${persone.name} and Age:${persone.age}`);
-  }
-});
+// students.map((persone) => {
+//   if (persone.age >= 30) {
+//     console.log(`Student name: ${persone.name} and Age:${persone.age}`);
+//   }
+// });
+

@@ -1,3 +1,4 @@
+// object data accessing.....
 const students = [
   {
     id: 1,
