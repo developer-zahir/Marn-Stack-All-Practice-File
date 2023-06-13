@@ -4,7 +4,7 @@ const blood_donation_club = [
     name: "Md Zahirul Islam",
     age: 20,
     blood_group: "A+",
-    locaton: "Dhaka",
+    location: "Dhaka",
     phone_number: "01775425651",
     last_donate: 10,
     donation_list: {
@@ -18,7 +18,7 @@ const blood_donation_club = [
     name: "Abdul Momin",
     age: 22,
     blood_group: "A-",
-    locaton: "Gazipur",
+    location: "Gazipur",
     phone_number: "01775425652",
     last_donate: 15,
     donation_list: {
@@ -32,7 +32,7 @@ const blood_donation_club = [
     name: "Al Imran",
     age: 25,
     blood_group: "B-",
-    locaton: "Pirojpur",
+    location: "Pirojpur",
     phone_number: "01775425653",
     last_donate: 25,
     donation_list: {
@@ -45,7 +45,7 @@ const blood_donation_club = [
     name: "Robiul Islam",
     age: 21,
     blood_group: "AB-",
-    locaton: "Mirpur",
+    location: "Mirpur",
     phone_number: "01775425653",
     last_donate: 55,
     donation_list: {
@@ -58,7 +58,7 @@ const blood_donation_club = [
     name: "Ebrahim Islam",
     age: 20,
     blood_group: "O+",
-    locaton: "Gulshan",
+    location: "Gulshan",
     phone_number: "01775425655",
     last_donate: 35,
     donation_list: {
@@ -71,7 +71,7 @@ const blood_donation_club = [
     name: "Saiful Islam",
     age: 20,
     blood_group: "B+",
-    locaton: "Raipura",
+    location: "Raipura",
     phone_number: "01775425656",
     last_donate: 26,
     donation_list: {
@@ -84,7 +84,7 @@ const blood_donation_club = [
     name: "Mukul Islam",
     age: 30,
     blood_group: "A+",
-    locaton: "Mirzapur",
+    location: "Mirzapur",
     phone_number: "01775425657",
     last_donate: 26,
     donation_list: {
@@ -97,7 +97,7 @@ const blood_donation_club = [
     name: "Rasel Islam",
     age: 28,
     blood_group: "AB+",
-    locaton: "Bhuapur",
+    location: "Bhuapur",
     phone_number: "01775425658",
     last_donate: 26,
     donation_list: {
@@ -110,7 +110,7 @@ const blood_donation_club = [
     name: "Alomgir Kobir",
     age: 30,
     blood_group: "O+",
-    locaton: "Gopalganj",
+    location: "Gopalganj",
     phone_number: "01775425659",
     last_donate: 40,
     donation_list: {
@@ -123,7 +123,7 @@ const blood_donation_club = [
     name: "Rofikul Islam",
     age: 30,
     blood_group: "AB-",
-    locaton: "Dhaka",
+    location: "Dhaka",
     phone_number: "01775425610",
     last_donate: 40,
     donation_list: {
@@ -144,135 +144,121 @@ const blood_donation_club = [
       patient_2: "Rahima",
     },
   },
-  // chect gpt ----------------
   {
     id: 12,
-    name: "Samantha Taylor",
+    name: "Asadur islam",
     age: 28,
     blood_group: "AB+",
-    location: "Phoenix",
-    phone_number: "0234789561",
+    location: "Dhaka",
+    phone_number: "01775425612",
     last_donate: 17,
     donation_list: {
-      patient_1: "Ethan Wilson",
-      patient_2: "Ava Lewis",
+      patient_1: "Sakib",
+      patient_2: "Sohan",
     },
   },
   {
     id: 13,
-    name: "David Wilson",
+    name: "Sajjad",
     age: 32,
     blood_group: "A-",
-    location: "Las Vegas",
-    phone_number: "0412987654",
+    location: "Bhola",
+    phone_number: "01775425613",
     last_donate: 7,
     donation_list: {
-      patient_1: "Sophia Garcia",
-      patient_2: "Noah Anderson",
+      patient_1: "Momin",
+      patient_2: "Saniya",
     },
   },
   {
     id: 14,
-    name: "Mia Moore",
+    name: "Miraj Khan",
     age: 27,
     blood_group: "B-",
-    location: "San Diego",
-    phone_number: "0987564312",
+    location: "Mirpur",
+    phone_number: "01775425614",
     last_donate: 16,
     donation_list: {
-      patient_1: "William Moore",
-      patient_2: "Isabella Davis",
+      patient_1: "Limon",
+      patient_2: "Manik",
     },
   },
   {
     id: 15,
-    name: "James Rodriguez",
+    name: "Al Amin ",
     age: 31,
     blood_group: "O-",
-    location: "Philadelphia",
-    phone_number: "0123498765",
+    location: "Gopalgonge",
+    phone_number: "01775425615",
     last_donate: 13,
     donation_list: {
-      patient_1: "Emma Thompson",
-      patient_2: "Michael Green",
+      patient_1: "Limon",
+      patient_2: "Rofik",
     },
   },
   {
     id: 16,
-    name: "Emily Lewis",
+    name: "Sofik",
     age: 29,
     blood_group: "AB-",
-    location: "Washington",
-    phone_number: "0456128739",
+    location: "Mirpur",
+    phone_number: "01775425616",
     last_donate: 4,
     donation_list: {
-      patient_1: "Alexander Moore",
-      patient_2: "Samantha Harris",
+      patient_1: "Mariya",
+      patient_2: "Mahi",
     },
   },
   {
     id: 17,
-    name: "Daniel Harris",
+    name: "Nusrat",
     age: 33,
     blood_group: "A+",
-    location: "Chicago",
+    location: "Mirpur",
     phone_number: "0897432165",
     last_donate: 19,
     donation_list: {
-      patient_1: "Mia Wilson",
-      patient_2: "James Davis",
+      patient_1: "Lamiya",
+      patient_2: "Sumaiya",
     },
   },
   {
     id: 18,
-    name: "Olivia Davis",
+    name: "Robiul",
     age: 26,
     blood_group: "B+",
-    location: "Houston",
-    phone_number: "0234987561",
+    location: "Bhola",
+    phone_number: "01775425618",
     last_donate: 8,
     donation_list: {
-      patient_1: "Emily Martin",
-      patient_2: "Daniel Thompson",
+      patient_1: "Arif",
+      patient_2: "Jamil",
     },
   },
   {
     id: 19,
-    name: "Michael Thompson",
+    name: "Monu",
     age: 30,
     blood_group: "O+",
-    location: "San Francisco",
-    phone_number: "0412789635",
+    location: "Feni",
+    phone_number: "01775425619",
     last_donate: 12,
     donation_list: {
-      patient_1: "Olivia Wilson",
-      patient_2: "James Clark",
+      patient_1: "Jahid",
+      patient_2: "Imran",
     },
   },
   {
     id: 20,
-    name: "zahir",
+    name: "Rabby",
     age: 28,
     blood_group: "AB+",
-    location: "Los Angeles",
+    location: "Patuakhali",
     phone_number: "0987654321",
     last_donate: 15,
     donation_list: {
-      patient_1: "Daniel Harris",
-      patient_2: "Emily Garcia",
-    },
-  },
-  {
-    id: 20,
-    name: "zahir",
-    age: 26,
-    blood_group: "AB+",
-    location: "Dhaka",
-    phone_number: "0987654321",
-    last_donate: 15,
-    donation_list: {
-      patient_1: "Daniel Harris",
-      patient_2: "Emily Garcia",
+      patient_1: "Roni",
+      patient_2: "Robiul",
     },
   },
 ];
@@ -282,16 +268,17 @@ function blood_donor_filter(name, age, location, blood_group, phone_number) {
 ------------------
 🔸 Name
 🔸 Age
-🔸 Location
+🔸 location
 🔸 Blood Group
 🔸 Phone number
 `);
 
-  // Convert search type to lowercase
+  // Convert search type into lowercase
   let search_type = get_search_type.toLowerCase();
 
   //  name filter ----------------
   if (search_type === "name") {
+    // get data form user
     let search_key = prompt("Enter the donor name: ").toLowerCase();
     let donors = blood_donation_club.filter((donor) => donor.name.toLowerCase() === search_key);
 
@@ -299,7 +286,7 @@ function blood_donor_filter(name, age, location, blood_group, phone_number) {
       console.log("Matching donors:");
       donors.map((donor) => {
         console.log(
-          `Name: ${donor.name}, Age: ${donor.age}, Location: ${donor.location}, Blood Group: ${donor.blood_group}, Phone Number: ${donor.phone_number}, Last donate: ${donor.last_donate} day ago`
+          `Name: ${donor.name}, Age: ${donor.age}, location: ${donor.location}, Blood Group: ${donor.blood_group}, Phone Number: ${donor.phone_number}, Last donate: ${donor.last_donate} day ago`
         );
       });
     } else {
@@ -309,6 +296,7 @@ function blood_donor_filter(name, age, location, blood_group, phone_number) {
 
   //  age filter ----------------
   else if (search_type === "age") {
+    // get data form user
     let search_key = prompt("Enter the donor age: ");
     let donors = blood_donation_club.filter((donor) => donor.age == search_key);
 
@@ -316,7 +304,7 @@ function blood_donor_filter(name, age, location, blood_group, phone_number) {
       console.log("Matching donors:");
       donors.map((donor) => {
         console.log(
-          `Name: ${donor.name}, Age: ${donor.age}, Location: ${donor.location}, Blood Group: ${donor.blood_group}, Phone Number: ${donor.phone_number}, Last donate: ${donor.last_donate} day ago`
+          `Name: ${donor.name}, Age: ${donor.age}, location: ${donor.location}, Blood Group: ${donor.blood_group}, Phone Number: ${donor.phone_number}, Last donate: ${donor.last_donate} day ago`
         );
       });
     } else {
@@ -325,6 +313,7 @@ function blood_donor_filter(name, age, location, blood_group, phone_number) {
   }
   //  location filter ----------------
   else if (search_type === "location") {
+    // get data form user
     let search_key = prompt("Enter the donor location: ").toLowerCase();
     let donors = blood_donation_club.filter((donor) => donor.location.toLowerCase() === search_key);
 
@@ -332,7 +321,7 @@ function blood_donor_filter(name, age, location, blood_group, phone_number) {
       console.log("Matching donors:");
       donors.map((donor) => {
         console.log(
-          `Name: ${donor.name}, Age: ${donor.age}, Location: ${donor.location}, Blood Group: ${donor.blood_group}, Phone Number: ${donor.phone_number}, Last donate: ${donor.last_donate} day ago`
+          `Name: ${donor.name}, Age: ${donor.age}, location: ${donor.location}, Blood Group: ${donor.blood_group}, Phone Number: ${donor.phone_number}, Last donate: ${donor.last_donate} day ago`
         );
       });
     } else {
@@ -341,6 +330,7 @@ function blood_donor_filter(name, age, location, blood_group, phone_number) {
   }
   // blood group filter
   else if (search_type === "blood group") {
+    // get data form user
     let search_key = prompt("Enter the donor blood group: ").toUpperCase();
     let donors = blood_donation_club.filter((donor) => donor.blood_group.toUpperCase() === search_key);
 
@@ -348,7 +338,7 @@ function blood_donor_filter(name, age, location, blood_group, phone_number) {
       console.log("Matching donors:");
       donors.map((donor) => {
         console.log(
-          `Name: ${donor.name}, Age: ${donor.age}, Location: ${donor.location}, Blood Group: ${donor.blood_group}, Phone Number: ${donor.phone_number}, Last donate: ${donor.last_donate} day ago`
+          `Name: ${donor.name}, Age: ${donor.age}, location: ${donor.location}, Blood Group: ${donor.blood_group}, Phone Number: ${donor.phone_number}, Last donate: ${donor.last_donate} day ago`
         );
       });
     } else {
@@ -358,6 +348,7 @@ function blood_donor_filter(name, age, location, blood_group, phone_number) {
 
   //  number filter ----------------
   else if (search_type === "phone number") {
+    // get data form user
     let search_key = prompt("Enter the donor phone number: ");
     let donors = blood_donation_club.filter((donor) => donor.phone_number === search_key);
 
@@ -365,14 +356,14 @@ function blood_donor_filter(name, age, location, blood_group, phone_number) {
       console.log("Matching donors:");
       donors.map((donor) => {
         console.log(
-          `Name: ${donor.name}, Age: ${donor.age}, Location: ${donor.location}, Blood Group: ${donor.blood_group}, Phone Number: ${donor.phone_number}, Last donate: ${donor.last_donate} day ago`
+          `Name: ${donor.name}, Age: ${donor.age}, location: ${donor.location}, Blood Group: ${donor.blood_group}, Phone Number: ${donor.phone_number}, Last donate: ${donor.last_donate} day ago`
         );
       });
     } else {
       console.log("No donors found with the given phone number.");
     }
   } else {
-    console.log("Select a valid search type { Name / Age / Location / Blood Group / Phone number }");
+    console.log("Select a valid search type { Name / Age / location / Blood Group / Phone number }");
   }
 }
 blood_donor_filter();
