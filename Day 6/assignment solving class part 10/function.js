@@ -13,9 +13,15 @@ How do you want to search?
 if (filter_type === "id") {
   const filter_key = prompt("Enter the id: ").toLowerCase();
   let donor = members.find((donor) => donor.id === parseInt(filter_key));
-//   Output ------
-console.log(`Name: ${donor.name} Age: ${donor.age} Phone: `);
-
+  //   Output ------
+  console.log(`Name: ${donor.name} Age: ${donor.age} Phone: ${donor.phone_number}`);
+  // donation history 
+  donor.donation_history.map((patient) => {
+    console.log(` 
+   Patient ${patient.id} 
+   Name: ${patient.name} Age: ${patient.age} Donate date: ${patient.donate_date}
+    `);
+  });
 } else if (filter_type === "name") {
   console.log("for name");
 } else if (filter_type === "age") {
@@ -37,7 +43,7 @@ console.log(`Name: ${donor.name} Age: ${donor.age} Phone: `);
   🔸 Blood Group
   🔸 Phone number
   
-  `); 
+  `);
 }
 
 // console.log(typeof filter_type);
