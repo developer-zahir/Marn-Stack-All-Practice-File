@@ -37,7 +37,7 @@ console.log(`Name: ${donor.name} Age: ${donor.age} Phone: `);
   🔸 Blood Group
   🔸 Phone number
   
-  `);
+  `); 
 }
 
 // console.log(typeof filter_type);
