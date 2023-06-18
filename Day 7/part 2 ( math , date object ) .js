@@ -6,7 +6,6 @@
 
 const date = new Date();
 console.log(date.getTime());
-
 //  another way
 console.log(Date.now());
 
