@@ -11,11 +11,11 @@ How do you want to search?
 `).toLowerCase();
 
 if (filter_type === "id") {
-  const filter_key = prompt("Enter the id: ").toLowerCase();
-  let donor = members.find((donor) => donor.id === parseInt(filter_key));
+  const filter_key = prompt("Enter the id: ");
+  const donor = members.find((donor) => donor.id === parseInt(filter_key.trim()));
   //   Output ------
   console.log(`Name: ${donor.name} Age: ${donor.age} Phone: ${donor.phone_number}`);
-  // donation history 
+  // donation history
   donor.donation_history.map((patient) => {
     console.log(` 
    Patient ${patient.id} 
@@ -23,15 +23,69 @@ if (filter_type === "id") {
     `);
   });
 } else if (filter_type === "name") {
-  console.log("for name");
+  const filter_key = prompt("Enter the donor name: ").toLowerCase();
+  const donors = members.filter((patient) => patient.name.toLowerCase() === filter_key.trim());
+  donors.map((donor) => {
+    console.log(`Name: ${donor.name} Age: ${donor.age} Phone: ${donor.phone_number}`);
+    // donation history
+    donor.donation_history.map((patient) => {
+      console.log(` 
+   Patient ${patient.id} 
+   Name: ${patient.name} Age: ${patient.age} Donate date: ${patient.donate_date}
+    `);
+    });
+  });
 } else if (filter_type === "age") {
-  console.log("for age");
+  const filter_key = prompt("Enter the donor age: ");
+  const donors = members.filter((patient) => patient.age === parseInt(filter_key.trim()));
+  donors.map((donor) => {
+    console.log(`Name: ${donor.name} Age: ${donor.age} Phone: ${donor.phone_number}`);
+    // donation history
+    donor.donation_history.map((patient) => {
+      console.log(` 
+   Patient ${patient.id} 
+   Name: ${patient.name} Age: ${patient.age} Donate date: ${patient.donate_date}
+    `);
+    });
+  });
 } else if (filter_type === "location") {
-  console.log("for location");
+  const filter_key = prompt("Enter the donor location: ").toLowerCase();
+  const donors = members.filter((patient) => patient.location.toLowerCase() === filter_key.trim());
+  donors.map((donor) => {
+    console.log(`Name: ${donor.name} Age: ${donor.age} Phone: ${donor.phone_number}`);
+    // donation history
+    donor.donation_history.map((patient) => {
+      console.log(` 
+   Patient ${patient.id} 
+   Name: ${patient.name} Age: ${patient.age} Donate date: ${patient.donate_date}
+    `);
+    });
+  });
 } else if (filter_type === "blood group") {
-  console.log("for blood group");
+  const filter_key = prompt("Enter the donor blood group: ").toLowerCase();
+  const donors = members.filter((patient) => patient.blood_group.toLowerCase() === filter_key.trim());
+  donors.map((donor) => {
+    console.log(`Name: ${donor.name} Age: ${donor.age} Phone: ${donor.phone_number}`);
+    // donation history
+    donor.donation_history.map((patient) => {
+      console.log(` 
+   Patient ${patient.id} 
+   Name: ${patient.name} Age: ${patient.age} Donate date: ${patient.donate_date}
+    `);
+    });
+  });
 } else if (filter_type === "phone number") {
-  console.log("for phone number");
+  const filter_key = prompt("Enter the donor phone number: ");
+  const donor = members.find((donor) => donor.phone_number === filter_key.trim());
+  //   Output ------
+  console.log(`Name: ${donor.name} Age: ${donor.age} Phone: ${donor.phone_number}`);
+  // donation history
+  donor.donation_history.map((patient) => {
+    console.log(` 
+   Patient ${patient.id} 
+   Name: ${patient.name} Age: ${patient.age} Donate date: ${patient.donate_date}
+    `);
+  });
 } else {
   console.log(`
   Select a valid search type: 

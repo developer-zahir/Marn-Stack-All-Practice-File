@@ -165,11 +165,12 @@ const devs = [
   },
 ];
 // ------------ filter -----------
-console.log(devs.filter((dev) => dev.sallery == 30000));
-console.log(devs.filter((dev) => dev.age >= 20 && dev.gender !== "Female"));
-//  ----------- find  -----------
-console.log(devs.find((dev) => dev.age === 20));
-// ------------ some  -----------
-console.log(devs.some((dev) => dev.name == "Al Imran"));
+devs.filter((dev) => dev.sallery == 30000 );
 
-//  another home task, 10 student data and gpa, cgpam and gread
+// console.log(devs.filter((dev) => dev.age >= 20 && dev.gender !== "Female"));
+// //  ----------- find  -----------
+// console.log(devs.find((dev) => dev.age === 20));
+// // ------------ some  -----------
+// console.log(devs.some((dev) => dev.name == "Al Imran"));
+
+// //  another home task, 10 student data and gpa, cgpam and gread
