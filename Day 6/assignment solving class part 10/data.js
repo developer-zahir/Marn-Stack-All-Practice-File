@@ -6,7 +6,8 @@ const members = [
     blood_group: "A+",
     location: "Dhaka",
     phone_number: "01775425643",
-    last_donate_date: "Februaty 18, 2022",
+    last_donate_date: "June 18, 2023",
+    status: 0,
     donation_history: [
       {
         id: 1,
