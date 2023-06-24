@@ -30,3 +30,8 @@ console.log(Math.max(10,40,50,5,80)); // output: 80
 console.log(Math.pow(2,3)); // power 
 console.log(Math.sqrt(144)); // root 
 console.log(Math.floor(Math.random()*100000));
+const floatNumber = 4.56566;
+
+// 2 decimal places
+const floatNumberWithTwoDecimalPlaces = parseFloat(floatNumber).toFixed(2);
+console.log(floatNumberWithTwoDecimalPlaces); // 4.56
