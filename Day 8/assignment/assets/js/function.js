@@ -40,7 +40,7 @@ function get_result(name, roll, bangla, english, math, science, religion, social
   //   CGPA calculate hobe kina sei conditon ----
   let cgpa;
   if (bangla >= 33 && english >= 33 && math >= 33 && science >= 33 && religion >= 33 && social >= 33) {
-    cgpa = (bng_result.gpa + eng_result.gpa + math_result.gpa + science_result.gpa + religion_result.gpa + social_result.gpa)/6;
+    cgpa = (bng_result.gpa + eng_result.gpa + math_result.gpa + science_result.gpa + religion_result.gpa + social_result.gpa) / 6;
   } else {
     cgpa = 0;
   }
@@ -58,4 +58,3 @@ function get_result(name, roll, bangla, english, math, science, religion, social
   Total mark: ${total_mark} and total CGPA: ${parseFloat(cgpa).toFixed(2)}
   `;
 }
-
