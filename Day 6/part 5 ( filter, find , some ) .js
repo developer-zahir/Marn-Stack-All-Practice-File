@@ -165,7 +165,10 @@ const devs = [
   },
 ];
 // ------------ filter -----------
-devs.filter((dev) => dev.sallery == 30000 );
+console.log(devs.filter((dev) => dev.age == 20 ));
+devs.filter((person)=>{
+  
+})
 
 // console.log(devs.filter((dev) => dev.age >= 20 && dev.gender !== "Female"));
 // //  ----------- find  -----------
