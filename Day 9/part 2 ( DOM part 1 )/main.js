@@ -47,3 +47,8 @@ console.log(document.querySelector("p"));
 console.log(document.querySelectorAll("p")[1]);
 console.log((document.querySelector("ul li:nth-child(2)").style.color = "red"));
 console.log((document.querySelector("ul li:nth-child(2)").style.backgroundColor = "green"));
+
+// extra topic --
+// innterText
+// textContent
+// innterHTML
