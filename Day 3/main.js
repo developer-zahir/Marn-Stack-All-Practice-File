@@ -18,3 +18,4 @@ function currency_converter(currency_name = "Dollar", amount = 1) {
     console.log(`$${amount} ${currency_name} = ${amount * rate} BDT (1 ${currency_name} = ${rate})`);
 }
 currency_converter("Euro", 3);
+

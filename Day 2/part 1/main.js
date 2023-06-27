@@ -6,9 +6,9 @@
 let boyosh = 20;
 let biyarBoyosh = 18;
 if (boyosh >= biyarBoyosh) {
-    console.log("Apnar biyar boyosh hoiche ✅");
+  console.log("Apnar biyar boyosh hoiche ✅");
 } else {
-    console.log("Apnar biyar boyosh hoy nai ❌");
+  console.log("Apnar biyar boyosh hoy nai ❌");
 }
 
 /* Answer to number 02
@@ -17,19 +17,19 @@ if (boyosh >= biyarBoyosh) {
 
 let result = 70;
 if (result >= 80) {
-    console.log("Your Greate is: A+ and GPA is: 5.0");
+  console.log("Your Greate is: A+ and GPA is: 5.0");
 } else if (result >= 70) {
-    console.log("Your Greate is: A and GPA is: 4.0");
+  console.log("Your Greate is: A and GPA is: 4.0");
 } else if (result >= 60) {
-    console.log("Your Greate is: A- and GPA is: 3.5");
+  console.log("Your Greate is: A- and GPA is: 3.5");
 } else if (result >= 50) {
-    console.log("Your Greate is: B and GPA is: 3.0");
+  console.log("Your Greate is: B and GPA is: 3.0");
 } else if (result >= 40) {
-    console.log("Your Greate is: C and GPA is: 2.0");
+  console.log("Your Greate is: C and GPA is: 2.0");
 } else if (result >= 33) {
-    console.log("Your Greate is: D and GPA is: 2.0");
+  console.log("Your Greate is: D and GPA is: 2.0");
 } else {
-    console.log("Your Greate is: F and GPA is: 0.0");
+  console.log("Your Greate is: F and GPA is: 0.0");
 }
 
 /* Answer to number 02
@@ -38,7 +38,7 @@ if (result >= 80) {
 
 let programAttendAge = 35;
 if (programAttendAge >= 20 && programAttendAge <= 35) {
-    console.log("You are eligible to join the program ✅");
+  console.log("You are eligible to join the program ✅");
 } else {
-    console.log("You are not eligible to join the program ❌");
+  console.log("You are not eligible to join the program ❌");
 }
