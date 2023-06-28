@@ -1,6 +1,6 @@
 let team_section = document.querySelector("#team-section");
 team_members_data.map((tem_member, index) => {
-    team_section.innerHTML += `
+  team_section.innerHTML += `
   <div class="col-lg-3">
   <!-- team item -->
   <div class="tema-item">
@@ -18,16 +18,16 @@ team_members_data.map((tem_member, index) => {
    <div class="team-social">
      <ul class="p-0 m-0 d-flex justify-content-center mt-4">
        <li>
-         <a href="${tem_member.facebook}"><i class="fa-brands fa-square-facebook"></i></a>
+         <a href="${tem_member.facebook}" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
        </li>
        <li>
-         <a href="${tem_member.instagram}"><i class="fa-brands fa-instagram"></i></a>
+         <a href="${tem_member.instagram} target="_blank""><i class="fa-brands fa-instagram"></i></a>
        </li>
        <li>
-         <a href="${tem_member.linkeding}"><i class="fa-brands fa-linkedin"></i></a>
+         <a href="${tem_member.linkeding} target="_blank""><i class="fa-brands fa-linkedin"></i></a>
        </li>
        <li>
-         <a href="${tem_member.twitter}"><i class="fa-brands fa-square-twitter"></i></a>
+         <a href="${tem_member.twitter} target="_blank""><i class="fa-brands fa-square-twitter"></i></a>
        </li>
      </ul>
    </div>
