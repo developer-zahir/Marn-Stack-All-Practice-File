@@ -6,8 +6,9 @@
 //   }
 // });
 
-console.log(document.querySelectorAll("a"));
-const all_a = document.querySelectorAll("a");
-all_a.forEach((item) => {
-  console.log(item);
-});
+// console.log(document.querySelectorAll("a"));
+// const all_a = document.querySelectorAll("a");
+// all_a.forEach((item) => {
+//   console.log(item);
+// });
+
