@@ -5,12 +5,14 @@
   font-family: sans-serif;
   list-style: none;
 }
-section {
+body {
   background: #f2f2f2;
-  height: 100vh;
+}
+section {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .team-item-inner {
