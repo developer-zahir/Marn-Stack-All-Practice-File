@@ -1,0 +1,9 @@
+.current-page-active {
+  color: unset !important;
+}
+#header .header-nav.header-nav-links nav>ul>li.dropdown>a:before, #header .header-nav.header-nav-line nav>ul>li.dropdown>a:before {
+   display: none;
+}
+header#header > div {
+    border-bottom: 1px solid #dddddd85 !important;
+}
