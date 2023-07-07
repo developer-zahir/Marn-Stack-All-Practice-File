@@ -1,0 +1,17 @@
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box{
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+button{
+  background-color: green;
+  color: white;
+  border: unset;
+  padding: 10px 20px;
+  cursor: pointer;
+}
