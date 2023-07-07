@@ -10,9 +10,22 @@ let foods = [];
 const food_processing = () => {
   let single_food = "";
   foods.map((food, index) => {
-    single_food += `<li><span class="sl">0${index + 1}</span>${food}</li>`;
+    single_food += `
+    
+    <li>
+        <span class="sl" data-index="${index}">0${index + 1}</span>
+        <span class="text-left"> ${food}</span>
+        <span class="remove_data">X</span>
+   </li>
+    `;
   });
   data_container.innerHTML = single_food;
+
+  // Add event listeners to remove data when "sl" button is clicked
+  const remove_data = document.querySelectorAll(".remove_data");
+  remove_data.forEach((button) => {
+    button.addEventListener("click", removeData);
+  });
 };
 
 // save data on local storage
@@ -34,6 +47,14 @@ const clearData = () => {
   localStorage.removeItem("foods");
   foods.length = 0; // Clear the foods array
   food_processing();
+};
+
+// Remove data item
+const removeData = (event) => {
+  const index = event.target.dataset.index;
+  foods.splice(index, 1);
+  food_processing();
+  saveDataToLocalStorage();
 };
 
 clear_data_button.addEventListener("click", clearData);

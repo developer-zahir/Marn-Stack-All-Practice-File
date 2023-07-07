@@ -5,6 +5,7 @@
   list-style: none;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 body {
   height: 100vh;
   display: flex;
@@ -63,25 +64,44 @@ body {
   padding: 20px;
   padding-top: 0;
 }
-.data-container .sl {
-  background-color: green;
-  color: white;
-  padding: 3px;
-  display: inline-block;
-  border-radius: 3px;
-  margin-right: 6px;
-}
+
 .data-container li {
   padding: 10px 0;
   border-bottom: 1px solid #dddddd52;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.data-container li span:nth-child(2) {
+  text-align: left !important;
+  display: block;
+  width: 85%;
+}
+
+/* remove data button  */
+
+.data-container li span:nth-child(2n-1) {
+  background-color: green;
+  color: white;
+  padding: 3px 7px;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 0 6px;
+}
+.data-container li span:last-child {
+  background: rgb(221, 12, 12);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.data-container li span:last-child:hover {
+  opacity: 0.7;
 }
 .data-container li:last-child {
   border-color: transparent;
 }
 
-
 /* box footer  ( clear all data ) */
-.box .box-footer button{
+.box .box-footer button {
   width: 100%;
   background-color: rgba(172, 42, 42, 0.658);
   color: white;
@@ -89,8 +109,10 @@ body {
   padding: 15px;
   border-radius: 3px;
   cursor: pointer;
-  transition: .4s;
+  transition: 0.4s;
 }
-.box .box-footer button:hover{
-  opacity: .9;
+.box .box-footer button:hover {
+  opacity: 0.9;
 }
+
+/* click to remove buttond */
