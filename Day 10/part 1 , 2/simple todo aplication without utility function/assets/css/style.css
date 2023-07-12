@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  border: 1px solid #ddd;
+  width: 650px;
+}
+/* header footer bg */
+.box .box-header,
+.box .box-footer {
+  padding: 20px;
+  background: #ddd;
+}
+/* header title */
+.box .box-header h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* box body (input and add button ) */
+.box .box-body {
+  margin-top: 20px;
+  padding: 25px 25px 0 25px;
+  display: flex;
+  gap: 15px;
+}
+.box .box-body input {
+  border: 1px solid #ddd;
+  padding: 13px;
+  outline: unset;
+  width: 80%;
+  transition: 0.4s;
+  border-radius: 3px;
+}
+.box .box-body input:focus {
+  border-color: green;
+}
+
+.box .box-body button {
+  width: 20%;
+  border: unset;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+.box .box-body button:hover {
+  opacity: 0.9;
+}
+.box .error_message {
+  display: block;
+  font-size: 13px;
+  color: red;
+  padding: 5px 25px 25px 25px;
+  visibility: hidden;
+}
+
+/* data listing */
+.data-container {
+  padding: 20px;
+  padding-top: 0;
+  max-height: 316px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+/* width */
+.data-container::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 3px;
+}
+
+/* Track */
+.data-container::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 3px;
+}
+
+/* Handle */
+.data-container::-webkit-scrollbar-thumb {
+  background: #33333342;
+}
+
+/* Handle on hover */
+.data-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.data-container li {
+  padding: 10px 0;
+  border-bottom: 1px solid #dddddd52;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.data-container li span:nth-child(2) {
+  text-align: left !important;
+  display: block;
+  width: 85%;
+}
+
+/* remove data button  */
+
+.data-container li span:nth-child(2n-1) {
+  background-color: green;
+  color: white;
+  padding: 4px 7px;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 0 6px;
+}
+.data-container li span:last-child {
+  background: rgb(221, 12, 12);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.delete_icon{
+  width: 15px;
+  filter: invert(1);
+  margin-top: 3px;
+}
+
+
+.data-container li span:last-child:hover {
+  opacity: 0.7;
+}
+.data-container li:last-child {
+  border-color: transparent;
+}
+
+/* box footer  ( clear all data ) */
+.box .box-footer {
+  display: flex;
+  gap: 15px;
+}
+.box .box-footer button {
+  background-color: rgba(172, 42, 42, 0.658);
+  color: white;
+  border: unset;
+  padding: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.4s;
+  width: 80%;
+}
+.box .box-footer button:last-child {
+  width: 20%;
+  background: #445760;
+}
+.box .box-footer button:hover {
+  opacity: 0.9;
+}
+
+/* click to remove buttond */
+
+@media (max-width: 800px) {
+  body {
+    height: auto;
+  }
+  .box {
+    width: 100%;
+  }
+  .data-container {
+    max-height: unset;
+  }
+  .data-container li{
+    font-size:15px;
+    }
+}
