@@ -1,0 +1,44 @@
+body {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center
+  ;
+  align-items: center;
+  height: 100vh;
+}
+.box {
+  width: 800px;
+  display: inline-block;
+  border: 1px solid #ddd;
+  padding: 50px 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+label{
+    text-align: left;
+    display: block;
+    margin-bottom: 10px !important;
+}
+textarea {
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  width: 100%;
+  outline: unset;
+  box-sizing: border-box;
+  overflow: hidden;
+  resize: none;
+  height: 130px;
+  transition: .4s;
+}
+textarea:focus{
+    border-color: green;
+}
+p {
+  border-radius: 3px;
+  background-color: bisque;
+  padding: 10px;
+  text-align-last: left;
+  height: 200px;
+}
