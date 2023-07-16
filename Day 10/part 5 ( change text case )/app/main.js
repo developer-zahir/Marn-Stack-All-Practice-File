@@ -16,7 +16,7 @@ textarea.addEventListener("input", function () {
   output.innerHTML = input_value;
 
   // word and characters counter --------
-  ch_count.innerHTML = input_value.trim.length;
+  ch_count.innerHTML = input_value.trim().length;
   const words = input_value.trim().split(/\s+/);
   wo_count.innerHTML = words.length;
 });
@@ -27,7 +27,7 @@ text_con_btn.forEach((item, index) => {
     if (item.value == "capitalize") {
       let text_to_word = textarea.value.split(" ");
       for (let i = 0; i < text_to_word.length; i++) {
-        text_to_word[i] = text_to_word[i].charAt(0).toUpperCase() + text_to_word[i].slice(1);
+        text_to_word[i] = text_to_word[i].charAt(0).toUpperCase() + text_to_word[i].toLowerCase().slice(1);
       }
       output.innerText = text_to_word.join(" ");
     } else if (item.value == "uppercase") {
@@ -65,12 +65,13 @@ all_clear.onclick = () => {
   textarea.value = "";
   output.innerText = "";
   wo_count.innerText = 0;
+  all_clear.innerText = "Cleared all data";
 };
 
 // reload browser ----
 
 reload.onclick = () => {
   location.reload();
+  reload.innerText = `Reload done`;
 };
 
-let red = 'red'

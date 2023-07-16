@@ -1,67 +1,84 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+*::-webkit-scrollbar{
+  width: 0;
+}
+:root {
+  --border-color: #ddd;
+  --white: white;
+  --black: black;
+  --green: green;
+  --teal: teal;
+  --btn-2: rgb(145, 56, 40);
+  --paragraph: #555;
+  --body: white;
+}
+
 body {
   height: calc(100vh - 20px);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  background: var(--white);
+  overflow-x: hidden;
 }
 .box {
   max-width: 1000px;
   display: inline-block;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
+  background: var(--white);
   padding: 50px 30px;
   box-sizing: border-box;
   overflow: hidden;
+  border-radius: 3px;
 }
 
 .box .input_group h1 {
   text-align: left;
   display: block;
   margin-bottom: 10px !important;
+  color: var(--black);
 }
 .box .input_group p {
   font-size: 15px;
   text-align: left;
-  color: #555;
+  color: var(--paragraph);
   line-height: 30px;
+  margin-bottom: 0;
 }
-.box .input_group textarea {
+.box .input_group textarea, textarea {
   padding: 10px;
   border-radius: 3px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   background-color: rgba(163, 201, 223, 0.082);
-
+  color: var(--black);
   width: 100%;
   outline: unset;
   box-sizing: border-box;
   overflow: hidden;
   resize: none;
-  height: 150px;
+  height: 220px;
+  overflow-y: scroll;
   transition: 0.4s;
+  position: relative;
+  margin: 15px 0;
 }
-textarea:focus {
-  border-color: green;
-}
-.output {
-  border-radius: 3px;
-  border: 1px solid #ddd;
-  background-color: rgba(163, 201, 223, 0.096);
-  padding: 10px;
-  text-align-last: left;
-  height: 250px;
-}
+
 /* dd */
 div.container {
-  margin-top: 13px;
+  margin-top: -3px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   padding: 10px;
+}
+
+.output{
+  line-height: 23px;
 }
 
 span {
@@ -69,6 +86,7 @@ span {
   font-weight: 600;
   margin: 8px 0 -4px 0;
   margin: 0 10px;
+  color: var(--black);
 }
 span:first-child {
   margin-left: 0;
@@ -80,8 +98,8 @@ i {
 /* ---------- */
 .right button {
   border: unset;
-  background-color: black;
-  color: white;
+  background-color: var(--black);
+  color: var(--white);
   padding: 5px 15px;
   margin: 0 4px;
   border-radius: 2px;
@@ -98,8 +116,8 @@ i {
 }
 .footer button {
   border: unset;
-  background-color: black;
-  color: white;
+  background-color: var(--black);
+  color: var(--white);
   padding: 13px 40px;
   margin: 0 4px;
   border-radius: 2px;
@@ -112,22 +130,19 @@ i {
 }
 
 .footer button.reload {
-  background: teal !important;
+  background: var(--teal) !important;
+  color: #fff;
 }
 .footer button.clear {
-  background: rgb(145, 56, 40);
-}
-
-/* cursor not allow */
-.not-allow {
-  cursor: not-allowed;
-  background: red;
+  background: var(--btn-2);
+  color: #fff;
 }
 
 @media only screen and (max-width: 930px) {
   body {
     height: unset;
     overflow-x: hidden;
+    align-items: flex-start;
   }
   .box {
     max-width: 100%;
