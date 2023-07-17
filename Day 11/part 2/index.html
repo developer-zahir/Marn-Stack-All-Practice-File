@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Day 11 || Part 1 ( form submite practice )</title>
+    <title>Day 11 || Part 2 ( form submite practice with image and image preview)</title>
     <!-- all css files -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -38,6 +38,11 @@
                   <div class="my-3">
                     <label for="phone">Phone number</label>
                     <input id="phone" name="phone" type="phone" class="form-control" />
+                  </div>
+                  <div class="my-3">
+                    <label for="profile_image">Select profile image</label>
+                    <input type="file" name="profile_image" id="profile_image" class="form-control" />
+                    <img src="" alt="" class="img-thumbnail mt-3 w-50" />
                   </div>
                   <div class="my-3 d-flex gap-3">
                     <button type="submit" class="btn btn-success px-5 w-50">Submit</button>
