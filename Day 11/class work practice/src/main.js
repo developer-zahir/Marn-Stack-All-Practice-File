@@ -71,3 +71,13 @@ function displayGalleryImages() {
   });
   gallery_list.innerHTML = content;
 }
+
+
+// reset all 
+let reset = document.querySelector('.reset')
+reset.onclick = (e)=>{
+  user_form.reset();
+  gallery_images = [];
+  profile_image_box.innerHTML = "";
+  displayGalleryImages();
+}
