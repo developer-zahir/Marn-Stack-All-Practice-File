@@ -1,0 +1,71 @@
+
+td {
+  vertical-align: middle;
+}
+.image_preview_box {
+  position: relative;
+  overflow: hidden;
+}
+.image_preview_box img{
+  border: 1px solid #ddd;
+}
+.image_preview_box .image_delete_button {
+  background-color: red;
+  color: white;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  position: absolute;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 3;
+}
+.image_delete_button:hover {
+  background: #b31a1a !important;
+  opacity: 1;
+  visibility: visible;
+
+}
+.image_preview_box img:hover ~ .image_delete_button {
+  opacity: 1;
+  visibility: visible;
+
+}
+
+/* delete student data button  */
+.delete-student-data {
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 3px;
+  padding: 8px 11px !important;
+}
+
+
+.delete-student-data:hover {
+  background: #b31a1a !important;
+}
+
+/* --------- */
+tr a {
+  transition: 0.4s;
+}
+tr a:hover {
+  color: green !important;
+}
+.student_list_section {
+  height: 100vh !important;
+  overflow-y: scroll;
+}
+.student_list_section::-webkit-scrollbar {
+  width: 0;
+}
