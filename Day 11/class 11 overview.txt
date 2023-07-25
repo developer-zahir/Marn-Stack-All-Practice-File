@@ -5,9 +5,11 @@ Part 2 - Form management ( image preview )
 Part 3 - Custom element 
 Part 4 - Custom element problem solveing class ( append child ) 
 Part 5 - Custom element ( append child, insertBefore, insertAfter, remove, write, replace) 
-Part 6 - 
-Part 7 -
+
 
 
 
 ------------------- BOM ----------------------
+
+Part 6 - windows: alart, locatin, screen, back, forword 
+Part 7 - setTimeout, clearTimeout, setInterval, clearInterval
