@@ -12,4 +12,4 @@ Part 5 - Custom element ( append child, insertBefore, insertAfter, remove, write
 ------------------- BOM ----------------------
 
 Part 6 - windows: alart, locatin, screen, back, forword 
-Part 7 - setTimeout, clearTimeout, setInterval, clearInterval
+Part 7 - setTimeout, clearTimeout
