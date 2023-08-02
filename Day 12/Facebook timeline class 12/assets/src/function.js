@@ -6,7 +6,7 @@ const setData = (key, data) => {
 // get data from the local storage
 const getData = (key) => {
   if (localStorage.getItem(key)) {
-    return JSON.parse(localStorage.getItem(key));
+    return JSON.parse(localStorage.getItem(key)).reverse();
   } else {
     return [];
   }
