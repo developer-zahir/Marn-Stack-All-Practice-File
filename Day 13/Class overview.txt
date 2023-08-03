@@ -1,0 +1,51 @@
+Day 13 
+----------------------
+Part 1 - Admin ui design ( student result dashbord ) 
+Part 2 - Add sutdent data deynamic with validation 
+Past 3 - Delete method 
+Past 4 - View data 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
