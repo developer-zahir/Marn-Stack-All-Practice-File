@@ -3,7 +3,7 @@ const photo = document.querySelector(".photo");
 const photo_preview = document.querySelector(".photo_preview");
 const msg = document.querySelector(".msg");
 const all_student_data = document.querySelector(".all-students-data");
-const single_siudent_view = document.querySelector(".student-result-data");
+const single_student_container = document.querySelector(".single_student_container");
 
 // profile photo preview
 photo.onchange = (e) => {
@@ -68,10 +68,10 @@ student_create_form.onsubmit = (e) => {
   } else if (!isNumber(data.reg)) {
     msg.innerHTML = createAlert("danger", "Registration number must be a number");
   } else {
-    msg.innerHTML = createAlert("success", ` <b>${data.name}</b> is successfully created`);
     const old_student = getData("students");
     old_student.push({ ...data, result: null, time: Date.now() });
     setData("students", old_student);
+    msg.innerHTML = createAlert("success", ` <b>${data.name}</b> is successfully created`);
     showData();
     e.target.reset();
     photo_preview.innerHTML = "";
@@ -91,12 +91,17 @@ const deleteStudent = (roll) => {
   }
 };
 
-//   show induvisual student data
 
+
+
+
+
+
+//   show induvisual student data
 const show_student_single_data = (roll) => {
   const students = getData("students");
-  const single_student = students.find((data, index) => data.roll === roll);
-  single_siudent_view.innerHTML = `
+  const single_student = students.find((data) => data.roll == roll);
+  single_student_container.innerHTML = `
   <div class="student-info text-center p-3" style="background:#dddddd80;">
   <img class="img-fluid w-100  " src="${single_student.photo}" alt="${single_student.name}" />
   <h3 class="h3 mb-0 mt-2">${single_student.name}</h3>
