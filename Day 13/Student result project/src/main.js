@@ -68,6 +68,10 @@ student_create_form.onsubmit = (e) => {
     msg.innerHTML = createAlert("danger", "Roll number must be a number");
   } else if (!isNumber(data.reg)) {
     msg.innerHTML = createAlert("danger", "Registration number must be a number");
+  } else if (data.roll.length !== 6 || data.roll.length < 6) {
+    msg.innerHTML = createAlert("danger", "Roll number must be 6 characters.");
+  } else if (data.reg.length !== 8 || data.reg.length < 8) {
+    msg.innerHTML = createAlert("danger", "Reg number must be 8 characters.");
   } else {
     const old_student = getData("students");
 
@@ -77,7 +81,13 @@ student_create_form.onsubmit = (e) => {
     } else if (old_student.some((item) => item.reg === data.reg)) {
       msg.innerHTML = createAlert("danger", ` This Reg No <b>( ${data.reg} ) </b> already exists`);
     } else {
-      old_student.push({ ...data, result: null, time: Date.now() });
+      old_student.push({
+        ...data,
+        result: null,
+        time: Date.now(),
+        id: getRandomUniqueID(10),
+      });
+
       setData("students", old_student);
       msg.innerHTML = createAlert("success", ` <b>${data.name}</b> is successfully created`);
       showData();
