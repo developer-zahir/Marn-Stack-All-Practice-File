@@ -1,4 +1,6 @@
 const student_create_form = document.querySelector("#student_create_form");
+const student_edite_form = document.querySelector("#student_edite_form");
+const add_student_modal = document.querySelector("#add_student_modal");
 const photo = document.querySelector(".photo");
 const photo_preview = document.querySelector(".photo_preview");
 const msg = document.querySelector(".msg");
@@ -12,7 +14,7 @@ photo.onchange = (e) => {
   }
 };
 
-// show data
+// show data on dashboard student list
 const showData = () => {
   const students = getData("students");
   let content = "";
@@ -33,7 +35,7 @@ const showData = () => {
             }')">
                 <i class="fa-solid fa-eye"></i>
             </button>
-            <button class="btn btn-sm btn-warning">
+            <button class="btn btn-sm btn-warning" data-bs-toggle="modal"  data-bs-target="#edite_student_modal" onclick = "editeStudent('${student.id}')">
                 <i class="fa-solid fa-edit"></i>
             </button>
             <button class="btn btn-sm btn-danger" onclick = "deleteStudent('${student.roll}')">
@@ -59,7 +61,6 @@ showData();
 student_create_form.onsubmit = (e) => {
   e.preventDefault();
 
-  // get all form data
   const from_data = new FormData(e.target);
   const data = Object.fromEntries(from_data);
   if (!data.name || !data.roll || !data.reg) {
@@ -91,10 +92,37 @@ student_create_form.onsubmit = (e) => {
       setData("students", old_student);
       msg.innerHTML = createAlert("success", ` <b>${data.name}</b> is successfully created`);
       showData();
+
+      setTimeout(() => {
+        add_student_modal.click();
+      }, 2000);
       e.target.reset();
       photo_preview.innerHTML = "";
     }
   }
+};
+
+// eidte student data
+const editeStudent = (id) => {
+  const students = getData("students");
+  const single_student = students.find((data) => data.id === id);
+  student_edite_form.querySelector('input[name="name"]').value = single_student.name;
+  student_edite_form.querySelector('input[name="roll"]').value = single_student.roll;
+  student_edite_form.querySelector('input[name="reg"]').value = single_student.reg;
+  student_edite_form.querySelector('input[name="photo"]').value = single_student.photo;
+  // profile photo preview
+
+  const photo_preview = student_edite_form.querySelector(".photo_preview");
+  const photo = student_edite_form.querySelector(".photo");
+
+  photo_preview.innerHTML = ` <img class="img-thumbnail mt-3 w-100" src="${single_student.photo}" > `;
+  photo.onchange = (e) => {
+    if (photo) {
+      photo_preview.innerHTML = ` <img class="img-thumbnail mt-3 w-100" src="${e.target.value}" > `;
+    } else {
+      photo_preview.innerHTML = " ";
+    }
+  };
 };
 
 // delete student from ls list
