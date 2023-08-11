@@ -1,4 +1,6 @@
 const student_create_form = document.querySelector("#student_create_form");
+const add_result_form = document.querySelector("#add_result_form");
+const edit_result_form = document.querySelector("#edit_result_form");
 const student_edite_form = document.querySelector("#student_edite_form");
 const add_student_modal_close = document.querySelector("#add_student_modal_close");
 const edite_student_modal_close = document.querySelector("#edite_student_modal_close");
@@ -29,7 +31,13 @@ const showData = () => {
             <td>${student.roll}</td>
             <td>${student.reg}</td>
             <td>${timeAgo(student.time)}</td>
-            <td><button class="btn btn-sm btn-success">Add result</button></td>
+            <td>
+            ${students.result === null ? 
+              `<button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#add_result_modal" onclick="addResult('${student.id}')">Add result</button>` :
+              `<button class="btn btn-sm btn-warning"  data-bs-toggle="modal" data-bs-target="#edit_result_modal">Edit result</button>`
+          }
+          
+            </td>
             <td>
             <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#show_single_student_modal" onclick="show_student_single_data('${
               student.roll
@@ -103,6 +111,61 @@ student_create_form.onsubmit = (e) => {
   }
 };
 
+// add result
+const addResult = (id) => {
+  add_result_form.querySelector('input[name="id').value = id;
+};
+
+add_result_form.onsubmit = (e) => {
+  e.preventDefault();
+  const form_data = new FormData(e.target);
+  const data = Object.fromEntries(form_data);
+
+  //  get old data form local storage
+  const old_student_data = getData("students");
+  old_student_data[old_student_data.findIndex((old_data) => old_data.id === data.id)] = {
+    ...old_student_data[old_student_data.findIndex((old_data) => old_data.id === data.id)],
+    result: data,
+  };
+  setData("students", old_student_data);
+  showData();
+  e.target.reset();
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// edite result and update result
+edit_result_form.onsubmit = (e) => {
+  e.preventDefault();
+  const form_data = new FormData(e.target);
+  const data = Object.fromEntries(form_data);
+
+
+
+}
+
+
+
+
 // eidte student data
 const editeStudent = (id) => {
   const students = getData("students");
@@ -144,12 +207,8 @@ student_edite_form.onsubmit = (e) => {
   } else if (data.reg.length !== 8 || data.reg.length < 8) {
     student_edite_form.previousElementSibling.innerHTML = createAlert("danger", "Reg number must be 8 characters.");
   } else {
-   
-   
     // get old students data from local storage and replace with new student edite data
     const old_students_data = getData("students");
-
-
 
     old_students_data[old_students_data.findIndex((old_data) => old_data.id === data.id)] = {
       ...old_students_data[old_students_data.findIndex((old_data) => old_data.id === data.id)],
