@@ -6,6 +6,8 @@ Part 3 - Delete method
 Part 4 - View data 
 Part 5 - Create a unique id and roll , reg exsist or not check
 Part 6 - Student Data Edit ( running ) 
+Part 7 - Add result
+
 
 
 
