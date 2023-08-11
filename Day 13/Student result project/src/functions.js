@@ -78,9 +78,9 @@ const getRandomUniqueID = (length = 10) => {
   return result;
 };
 
-try {
-  const uniqueID = getRandomUniqueID();
-  console.log(uniqueID);
-} catch (error) {
-  console.error(error);
-}
+// try {
+//   const uniqueID = getRandomUniqueID();
+//   console.log(uniqueID);
+// } catch (error) {
+//   console.error(error);
+// }

@@ -40,6 +40,64 @@ Part 6 - Student Data Edit ( running )
 
 
 
+//  submit edite sutdetn data with validation message
+student_edite_form.onsubmit = (e) => {
+  e.preventDefault();
+  const from_data = new FormData(e.target);
+  const data = Object.fromEntries(from_data);
+
+  // cehck data validation
+  if (!data.name || !data.roll || !data.reg) {
+    student_edite_form.previousElementSibling.innerHTML = createAlert("danger", "All fields are required");
+  } else if (!isNumber(data.roll)) {
+    student_edite_form.previousElementSibling.innerHTML = createAlert("danger", "Roll number must be a number");
+  } else if (!isNumber(data.reg)) {
+    student_edite_form.previousElementSibling.innerHTML = createAlert("danger", "Registration number must be a number");
+  } else if (data.roll.length !== 6 || data.roll.length < 6) {
+    student_edite_form.previousElementSibling.innerHTML = createAlert("danger", "Roll number must be 6 characters.");
+  } else if (data.reg.length !== 8 || data.reg.length < 8) {
+    student_edite_form.previousElementSibling.innerHTML = createAlert("danger", "Reg number must be 8 characters.");
+  } else {
+    const old_student = getData("students");
+
+    // check roll and registetion number exsist or not
+    if (old_student.some((item) => item.roll === data.roll)) {
+      student_edite_form.previousElementSibling.innerHTML = createAlert("danger", ` This Roll <b>( ${data.roll} ) </b> already exists`);
+    } else if (old_student.some((item) => item.reg === data.reg)) {
+      student_edite_form.previousElementSibling.innerHTML = createAlert("danger", ` This Reg No <b>( ${data.reg} ) </b> already exists`);
+    } else {
+      // get old students data from local storage and replace with new student edite data
+      old_student[old_student.findIndex((old_data) => old_data.id === data.id)] = {
+        ...old_student[old_student.findIndex((old_data) => old_data.id === data.id)],
+        ...data,
+      };
+
+      //  get privius element child and create student update success message
+      student_edite_form.previousElementSibling.innerHTML = createAlert("success", ` ${data.name} data update successfull`);
+      // set new edited student data on local storage
+      setData("students", old_student);
+      showData();
+
+      // auto modal close
+      setTimeout(() => {
+        edite_student_modal_close.click();
+      }, 2000);
+    }
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
