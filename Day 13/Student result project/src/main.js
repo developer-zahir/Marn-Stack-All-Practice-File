@@ -32,12 +32,13 @@ const showData = () => {
             <td>${student.reg}</td>
             <td>${timeAgo(student.time)}</td>
             <td>
-            ${students.result === null ? 
-              `<button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#add_result_modal" onclick="addResult('${student.id}')">Add result</button>` :
-              `<button class="btn btn-sm btn-warning"  data-bs-toggle="modal" data-bs-target="#edit_result_modal">Edit result</button>`
-          }
+            ${
+              student.result === null
+                ? `<button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#add_result_modal" onclick="addResult('${student.id}')">Add result</button>`
+                : `<button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#edit_result_modal" onclick="eidteResult('${student.id}')">Edit result</button>`
+            }
+          </td>
           
-            </td>
             <td>
             <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#show_single_student_modal" onclick="show_student_single_data('${
               student.roll
@@ -99,8 +100,6 @@ student_create_form.onsubmit = (e) => {
       });
 
       setData("students", old_student);
-      msg.innerHTML = createAlert("success", ` <b>${data.name}</b> is successfully created`);
-      showData();
 
       setTimeout(() => {
         add_student_modal_close.click();
@@ -109,6 +108,13 @@ student_create_form.onsubmit = (e) => {
       photo_preview.innerHTML = "";
     }
   }
+};
+
+// Reset form data
+student_create_form.querySelector(".reset").onclick = () => {
+  student_create_form.reset();
+  student_create_form.querySelector(".photo_preview").innerHTML = "";
+  msg.innerHTML = "";
 };
 
 // add result
@@ -120,51 +126,52 @@ add_result_form.onsubmit = (e) => {
   e.preventDefault();
   const form_data = new FormData(e.target);
   const data = Object.fromEntries(form_data);
+  const new_data = { ...data };
+  delete new_data.id;
 
   //  get old data form local storage
   const old_student_data = getData("students");
   old_student_data[old_student_data.findIndex((old_data) => old_data.id === data.id)] = {
     ...old_student_data[old_student_data.findIndex((old_data) => old_data.id === data.id)],
-    result: data,
+    result: new_data,
   };
+  add_result_form.previousElementSibling.innerHTML = createAlert("success", `Result Added successfull`);
   setData("students", old_student_data);
   showData();
   e.target.reset();
 };
 
+// // edite result and update result
+const eidteResult = (id) => {
+  const old_students_data = getData("students");
+  const single_student_data = old_students_data.find((old_data) => old_data.id === id);
+  edit_result_form.querySelector('input[name="bangla"]').value = single_student_data.result.bangla;
+  edit_result_form.querySelector('input[name="english"]').value = single_student_data.result.english;
+  edit_result_form.querySelector('input[name="math"]').value = single_student_data.result.math;
+  edit_result_form.querySelector('input[name="science"]').value = single_student_data.result.science;
+  edit_result_form.querySelector('input[name="social_science"]').value = single_student_data.result.social_science;
+  edit_result_form.querySelector('input[name="religion"]').value = single_student_data.result.religion;
+  edit_result_form.querySelector('input[name="id"]').value = id;
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// edite result and update result
 edit_result_form.onsubmit = (e) => {
   e.preventDefault();
   const form_data = new FormData(e.target);
   const data = Object.fromEntries(form_data);
 
+  const new_data = { ...data };
+  delete new_data.id;
 
-
-}
-
-
-
+  let old_students_data = getData("students");
+  old_students_data[old_students_data.findIndex((old_data) => old_data.id === data.id)] = {
+    ...old_students_data[old_students_data.findIndex((old_data) => old_data.id === data.id)],
+    result: new_data,
+  };
+  console.log(new_data);
+  edit_result_form.previousElementSibling.innerHTML = createAlert("success", `Result Update successfull`);
+  setData("students", old_students_data);
+  showData();
+};
 
 // eidte student data
 const editeStudent = (id) => {
@@ -244,15 +251,32 @@ const show_student_single_data = (roll) => {
   const single_student = students.find((data) => data.roll == roll);
   single_student_container.innerHTML = `
   <div class="text-end mb-2"> <button class="btn-close" data-bs-dismiss="modal"></button></div>
+ 
   <div class="student-info text-center p-3" style="background:#dddddd80;">
-  <img class="img-fluid w-100  " src="${single_student.photo}" alt="${single_student.name}" />
-  <h3 class="h3 mb-0 mt-2">${single_student.name}</h3>
-  <div class="d-flex gap-2 justify-content-center mt-0">
-    <span>Roll: ${single_student.roll}</span>
-    <span>Reg: ${single_student.reg}</span>
+  
+  
+  
+  <div class="row">
+    <div class="col-lg-3"> 
+     <img class="img-fluid w-100 rounded  " src="${single_student.photo}" alt="${single_student.name}" />
+    </div>
+    <div class="col-lg-9 text-start">
+      <h3 class="h4 m-0">${single_student.name}</h3>
+      
+        <span>Roll: ${single_student.roll}</span>
+        <span>Reg: ${single_student.reg}</span>
+ 
+    </div>
   </div>
-</div>
-<div >
+
+
+    
+    
+ </div>
+
+
+
+<div>
   <table class="table table-striped border mt-3">
     <thead class="fw-bold">
       <tr>

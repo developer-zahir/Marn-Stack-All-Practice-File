@@ -5,8 +5,11 @@ Part 2 - Add sutdent data deynamic with validation
 Part 3 - Delete method 
 Part 4 - View data 
 Part 5 - Create a unique id and roll , reg exsist or not check
-Part 6 - Student Data Edit ( running ) 
-Part 7 - Add result
+Part 6 - Student Data Edit 
+Part 7 - Add result / Add markes
+Part 8 - Array, object and distructore concept sessioin
+Part 9 - Edite markes   
+Part 10 - how to get checkbox, select, radio value and search result page design 
 
 
 
