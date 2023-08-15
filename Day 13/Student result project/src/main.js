@@ -108,6 +108,7 @@ student_create_form.onsubmit = (e) => {
       photo_preview.innerHTML = "";
     }
   }
+  showData();
 };
 
 // Reset form data
