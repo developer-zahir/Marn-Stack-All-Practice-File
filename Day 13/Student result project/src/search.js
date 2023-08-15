@@ -1,4 +1,4 @@
-const search_section = document.querySelector('.search_section')
+const search_section = document.querySelector(".search_section");
 const search_result_form = document.getElementById("search_result_form");
 const sheet = document.querySelector(".markSheet_container");
 
@@ -10,16 +10,15 @@ search_result_form.onsubmit = (e) => {
 
   let oldData = getData("students");
 
-  const studentResult = oldData.find(
-    (item) => item.roll === data.roll && item.reg === data.reg
-  );
+  const studentResult = oldData.find((item) => item.roll === data.roll && item.reg === data.reg);
 
   let content;
 
   if (studentResult) {
-    search_section.style.display = 'none';
-    sheet.style.display = 'block';
+    search_section.style.display = "none";
+    sheet.style.display = "block";
     content = `
+    <div class="for_print_section">
     <div class="card my-4 mt-5">
     <div class="card-body student-result-sheet">
       <div class="student-info">
@@ -32,32 +31,23 @@ search_result_form.onsubmit = (e) => {
       </div>
      
       <div class="col-lg-9"> 
-      ${
-        getFinalResult({
-          bangla: studentResult.result.bangla,
-          english: studentResult.result.english,
-          math: studentResult.result.math,
-          science: studentResult.result.science,
-          social_science: studentResult.result.social_science,
-          religion: studentResult.result.religion,
-        }).result === "F"
-          ? '<h2 style="color:red;">Failed</h2>'
-          : '<h2 style="color:green;">Passed</h2>'
-      }
+        <div class="result_status text-end" >
+        ${
+          getFinalResult({
+            bangla: studentResult.result.bangla,
+            english: studentResult.result.english,
+            math: studentResult.result.math,
+            science: studentResult.result.science,
+            social_science: studentResult.result.social_science,
+            religion: studentResult.result.religion,
+          }).result === "F"
+            ? '<h2 style="color:red; font-size:20px;">Failed</h2>'
+            : '<h2 style="color:green; font-size:20px;">Passed</h2>'
+        }
+        </div>
        
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-      
-   
 
     <hr />
     <table class="table table-bordered">
@@ -127,10 +117,13 @@ search_result_form.onsubmit = (e) => {
   </div>
   </div>
   </div>
+ </div>
+
   <div class="border rounded-3 p-4 d-flex gap-3">
-   <button type="button" class="btn btn-primary px-5" onclick="printMarkSheed()">Print</button> 
+   <button type="button" class="btn btn-primary px-5" onclick="printMarkSheet()">Print</button> 
    <button type="button" class="btn btn-danger px-5" onclick="try_again()">Try again</button> 
   </div>
+
     `;
   } else {
     content = `
@@ -142,8 +135,7 @@ search_result_form.onsubmit = (e) => {
       </div>
       </div>
     
-    `
-  
+    `;
   }
 
   sheet.innerHTML = content;
@@ -151,7 +143,20 @@ search_result_form.onsubmit = (e) => {
 // const try_again = doucment.querySelector('.try_again');
 
 const try_again = () => {
-  search_section.style.display = 'block';
-  sheet.style.display = 'none';
-  search_result_form.reset()
-}
+  search_section.style.display = "block";
+  sheet.style.display = "none";
+  search_result_form.reset();
+};
+
+// Define the print function
+const printMarkSheet = () => {
+  sheet.style.display = "none";
+  sheet.querySelector(".result_status").style.display = "none";
+  const printContent = document.querySelector(".markSheet_container .for_print_section").innerHTML;
+  const originalContent = document.body.innerHTML;
+  document.body.innerHTML = printContent;
+  window.print();
+
+  document.body.innerHTML = originalContent;
+  sheet.style.display = "block";
+};
