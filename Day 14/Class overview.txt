@@ -5,6 +5,7 @@ Part 1 -- Function concept -
 > curried function
 > callback function
 
+
 Part 2 -- 
 > async await function
 > promise function
@@ -15,11 +16,8 @@ Part 3 --
 > async await and fatch function + api ( basic project ) // have hme work 
 
 
-Part 4 --  prototypes, 
+Part 4 -- custom property and prototype  
 
 
-
-
-
-
+Part 5 -- 
 > constructor function
