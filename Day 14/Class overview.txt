@@ -1,0 +1,25 @@
+Part 1 -- Function concept - 
+> function declaration
+> function expression
+> arrow function
+> curried function
+> callback function
+
+Part 2 -- 
+> async await function
+> promise function
+> fatch function + api 
+
+
+Part 3 -- 
+> async await and fatch function + api ( basic project ) // have hme work 
+
+
+Part 4 --  prototypes, 
+
+
+
+
+
+
+> constructor function
