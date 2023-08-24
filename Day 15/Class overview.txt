@@ -1,0 +1,13 @@
+Part 1 - What is node js? , why node js? 
+Part 2 - Download node js, node js modules ----------
+Part 3 - built-in module ( fs )
+	
+	- writefile() - ekta callback function create kora hobe...
+	- writefileSync()
+	- unlink() - ekta callback function create korte hobe
+	- unlinkSync()
+	- mkdir() - ekta callback function create korte hobe
+	- mkdirSync()
+	- writeFileSync() --> replace old text . new text
+	- appendFileSync() - > old and new both text 
+	- readfileSync()
