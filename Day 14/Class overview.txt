@@ -21,3 +21,9 @@ Part 4 -- custom property and prototype
 
 Part 5 -- 
 > constructor function
+
+
+
+
+Part 6 --- 
+> 
