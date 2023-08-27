@@ -27,3 +27,13 @@ Part 5 --
 
 Part 6 --- 
 > constructor function advance topic ( student result gpa/gepa system )
+
+
+
+Part 7 ---
+> constructor function recap, and class based function  
+
+
+
+Part 8 ---
+> class based function ( advance )
