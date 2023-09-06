@@ -11,3 +11,41 @@ Part 3 - built-in module ( fs )
 	- writeFileSync() --> replace old text . new text
 	- appendFileSync() - > old and new both text 
 	- readfileSync()
+
+
+Part 4 - How to exports and require details, direct exports.function_name() , module.exports , file system.
+
+
+Part 5 - Path module, url module, os module
+
+	- path
+	- path.parse()
+	- path.join()
+
+	- url
+	- url.parse()
+	- url.pathToFileURL()
+
+	- os
+	- os.version()
+	- os.
+
+wifi hasan boro da -- > 01747610794
+
+Part 6 - What is npm? Why npm? ( npm == node packeg manager ) 
+	- npm -v
+	- npm install ( packeg name ) 
+	- also intrduct some npm packeg.
+	- dotenv packeg 
+	- How to create npm packeg ( Basic intrduct ) 
+
+
+Part 7 - How to create npm packeg and how to diplow it npm org.
+
+
+Part 8 - About server 
+
+
+Part 9 - install postman for create server, and create server, http module
+
+

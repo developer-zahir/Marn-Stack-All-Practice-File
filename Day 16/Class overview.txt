@@ -1,0 +1,11 @@
+Part 1 - Create server and all required folder structure
+
+Part 2  - Server with responser 
+	- writeHead();
+	- write();
+	- introduced are Request types/method
+	- req.method
+	- req.url
+	- simple porject 
+
+
