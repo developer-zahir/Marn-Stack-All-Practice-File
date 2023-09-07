@@ -1,11 +1,19 @@
-Part 1 - Create server and all required folder structure
-
-Part 2  - Server with responser 
-	- writeHead();
-	- write();
-	- introduced are Request types/method
+Class 16
+-------------------------------------
+Part 1 - Server create, port (advance), server folder stucture 
+Part 2 - res.write();
+	- res.writeHead();
+	- html/json response
+	- How to work postman software ( request and response ) 
 	- req.method
 	- req.url
-	- simple porject 
+	- basic porject 
 
 
+Part 3 - Server create using express 
+       - Install express and require express
+       - Talked about route and a small project
+       - form submition using express
+       - Some features of Postman are explained
+
+Part 4 - file/module import and export 
