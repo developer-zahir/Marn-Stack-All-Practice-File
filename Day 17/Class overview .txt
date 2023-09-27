@@ -1,0 +1,30 @@
+Class 17
+-------------------------
+Part 1 - About Hosting/Server for Host our project 
+Part 2 - export / import ( easy and informative ) 
+
+Part 3 - create server using express and module js 
+       - status code 
+       - new server create
+       - send json data
+       - send data as a params
+       - express.static()
+       - express.json()
+       - express.urlencoded()
+       - express.text()
+
+Part 4 - create server using express and module js
+       - about MVC partten
+       - controller
+
+Part 5 - About router + create router + import export route
+       - About folder stacture
+
+
+Part 6 - Create a route
+       - Explain how to work Middleware ( need to see )
+
+
+Part 7 - Emailing system ( NodeMailer ) 
+       - Insatll  NodeMailer ( npm nodemailer ) 
+       - Email sending seytem 	( using google gamil ) 
