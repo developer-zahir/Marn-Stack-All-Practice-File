@@ -15,7 +15,6 @@ app.use(express.static("public"));
 
 // middleware
 app.use(express.json());
-app.use(express.text());
 app.use(express.urlencoded({ extended: false }));
 
 // ejs setup

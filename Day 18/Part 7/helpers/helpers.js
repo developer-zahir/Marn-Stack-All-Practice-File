@@ -23,3 +23,5 @@ export const createSlug = (name) => {
   const cleanedSlug = slug.replace(/[^a-z0-9-]/g, "");
   return cleanedSlug;
 };
+
+

@@ -48,6 +48,26 @@ input:focus{
 
 
 /* shop page */
-.product-quic-details .sale-price{
-    display: none;
+.product-wrapper{
+    transition: .4s;
+}
+.product-wrapper:hover{
+  box-shadow: 0 5px  10px rgba(0, 0, 0, 0.147);
+}
+
+
+.h5, h5 {
+    font-size: 1rem;
+    margin: 0;
+    margin-top: -9px;
+}
+
+
+span.sale-price {
+    background: green;
+    color: white;
+    display: inline-block;
+    padding: 0 4px 2px 4px;
+    margin: 0 !important;
+    box-sizing: border-box;
 }

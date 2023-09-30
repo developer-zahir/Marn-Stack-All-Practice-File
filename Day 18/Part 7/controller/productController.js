@@ -1,7 +1,7 @@
 import { createSlug, getRandomUniqueId } from "../helpers/helpers.js";
 import fs from "fs";
 
-// all products
+// Show all  products on dashbord
 export const get_all_products = (req, res) => {
   const productData = JSON.parse(fs.readFileSync("./db/product.json").toString());
   if (productData.length === 0) {
@@ -36,12 +36,9 @@ export const create_product = (req, res) => {
   };
 
   productData.push(product);
-  res.status(200).json({
-    product,
-    message: "product created",
-  });
-
   fs.writeFileSync("./db/product.json", JSON.stringify(productData));
+
+  res.redirect("/product-dashboard");
 };
 
 // Show single product
@@ -62,24 +59,80 @@ export const delete_product = (req, res) => {
 
   const updatedProduct = productData.filter((data) => data.id !== id);
   fs.writeFileSync("./db/product.json", JSON.stringify(updatedProduct));
-  res.status(200).json({ message: "product deleted" });
+
+  res.redirect("/product-dashboard");
 };
 
-// Show product pagew
-export const show_product_dashboard= (req, res) => {
-  // view > product.ejs
-  res.render("product-dashboard");
+// Show product on dashbord page
+export const show_product_dashboard = (req, res) => {
+  const productData = JSON.parse(fs.readFileSync("./db/product.json").toString());
+
+  // view > product dashbord .ejs
+  res.render("product-dashboard", {
+    products: productData,
+  });
 };
 
-
-
-// show add product page 
-export const show_add_product_page = (req, res)=>{
-  res.render("add-product")
-}
-
+// show add product page
+export const show_add_product_page = (req, res) => {
+  res.render("add-product");
+};
 
 // show shop page
-export const show_shop_page = (req, res)=>{
-  res.render("shop")
-}
+export const show_shop_page = (req, res) => {
+  const productData = JSON.parse(fs.readFileSync("./db/product.json").toString());
+  res.render("shop", {
+    products: productData,
+  });
+};
+
+// show single product
+export const show_single_product_page = (req, res) => {
+  const { slug } = req.params;
+  const productData = JSON.parse(fs.readFileSync("./db/product.json").toString());
+
+  // find single product
+  const sProduct = productData.find((data) => data.slug === slug);
+
+  res.render("single-product", {
+    singleProduct: sProduct,
+  });
+};
+
+// show edite porduct page
+export const show_edit_product_page = (req, res) => {
+  const { id } = req.params;
+  const productData = JSON.parse(fs.readFileSync("./db/product.json").toString());
+
+  // find single product
+  const singleProduct = productData.find((data) => data.id === id);
+
+  res.render("edit-product", {
+    editProduct: singleProduct, // Fix the variable name here
+  });
+};
+
+// product update
+export const update_product = (req, res) => {
+  const { id } = req.params;
+  const { name, regularPrice, salePrice, stock } = req.body;
+  const productData = JSON.parse(fs.readFileSync("./db/product.json").toString());
+
+  let photoName = productData[productData.findIndex((data) => data.id === id)].photo;
+  if (req?.file?.filename) {
+    photoName = req.file.filename;
+  }
+
+  productData[productData.findIndex((data) => data.id === id)] = {
+    ...productData[productData.findIndex((data) => data.id === id)],
+    id: id,
+    slug: createSlug(name),
+    name,
+    regularPrice,
+    salePrice,
+    stock,
+    photo: photoName,
+  };
+  fs.writeFileSync("./db/product.json", JSON.stringify(productData));
+  res.redirect("/product-dashboard");
+};

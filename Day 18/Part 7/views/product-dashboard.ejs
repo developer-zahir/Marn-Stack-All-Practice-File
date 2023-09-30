@@ -15,78 +15,21 @@
           </tr>
         </thead>
         <tbody>
+          <% products.forEach((product, index) => { %> 
+
           <tr>
-            <td>01</td>
+            <td><%= index + 1 %></td>
+            <td><img class="porduct-image" src="/product_photo/<%= product.photo %>" alt="<%= product.name %>" /></td>
+            <td><%= product.name %></td>
+            <td><%= product.regularPrice %></td>
+            <td><%= product.stock %></td>
             <td>
-              <img
-                class="porduct-image"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK1XLD-12hDtpJcf4M8nVEZiwunQnPPU-1fEYNZcDvEx8hgMEP_sAVhMNe1hEZ_nSrLzs&usqp=CAU"
-                alt=""
-              />
-            </td>
-            <td>Alu pro max</td>
-            <td>200</td>
-            <td>20</td>
-            <td>
-              <button class="view btn btn-primary btn-sm"><i class="fa-solid fa-eye"></i></button>
-              <button class="edite btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></button>
-              <button class="delete btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
+              <a href="/single/<%= product.slug %>" class="view btn btn-primary btn-sm"><i class="fa-solid fa-eye"></i></a>
+              <a href="/edit/<%= product.id %>" class="edite btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+              <a href="/product-delete/<%= product.id %>" class="delete btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a>
             </td>
           </tr>
-          <tr>
-            <td>01</td>
-            <td>
-              <img
-                class="porduct-image"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK1XLD-12hDtpJcf4M8nVEZiwunQnPPU-1fEYNZcDvEx8hgMEP_sAVhMNe1hEZ_nSrLzs&usqp=CAU"
-                alt=""
-              />
-            </td>
-            <td>Alu pro max</td>
-            <td>200</td>
-            <td>20</td>
-            <td>
-              <button class="view btn btn-primary btn-sm"><i class="fa-solid fa-eye"></i></button>
-              <button class="edite btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></button>
-              <button class="delete btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
-            </td>
-          </tr>
-          <tr>
-            <td>01</td>
-            <td>
-              <img
-                class="porduct-image"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK1XLD-12hDtpJcf4M8nVEZiwunQnPPU-1fEYNZcDvEx8hgMEP_sAVhMNe1hEZ_nSrLzs&usqp=CAU"
-                alt=""
-              />
-            </td>
-            <td>Alu pro max</td>
-            <td>200</td>
-            <td>20</td>
-            <td>
-              <button class="view btn btn-primary btn-sm"><i class="fa-solid fa-eye"></i></button>
-              <button class="edite btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></button>
-              <button class="delete btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
-            </td>
-          </tr>
-          <tr>
-            <td>01</td>
-            <td>
-              <img
-                class="porduct-image"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK1XLD-12hDtpJcf4M8nVEZiwunQnPPU-1fEYNZcDvEx8hgMEP_sAVhMNe1hEZ_nSrLzs&usqp=CAU"
-                alt=""
-              />
-            </td>
-            <td>Alu pro max</td>
-            <td>200</td>
-            <td>20</td>
-            <td>
-              <button class="view btn btn-primary btn-sm"><i class="fa-solid fa-eye"></i></button>
-              <button class="edite btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i></button>
-              <button class="delete btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
-            </td>
-          </tr>
+          <% }) %>
         </tbody>
       </table>
     </div>
