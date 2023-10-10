@@ -61,7 +61,6 @@ export const user_register = async (req, res) => {
     <h1>Hi👋, ${name} </h1>
     <p>Your account has been successfully created.</p>
     <i>Lets's have fun</i>
-    
     `,
   });
 
