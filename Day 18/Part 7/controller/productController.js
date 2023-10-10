@@ -133,6 +133,8 @@ export const update_product = (req, res) => {
     stock,
     photo: photoName,
   };
+
+  
   fs.writeFileSync("./db/product.json", JSON.stringify(productData));
   res.redirect("/product-dashboard");
 };

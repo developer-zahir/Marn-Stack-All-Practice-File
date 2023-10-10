@@ -48,6 +48,19 @@ input:focus{
 
 
 /* shop page */
+.banner-section{
+    height: 500px;
+    border-radius: 5px;
+    background: url("../assets/img/bannar.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.product-anchor{
+    display: inline-block;
+    color: unset;
+    text-decoration: none;
+}
 .product-wrapper{
     transition: .4s;
 }
@@ -59,9 +72,13 @@ input:focus{
 .h5, h5 {
     font-size: 1rem;
     margin: 0;
-    margin-top: -9px;
+    margin-top: -12px;
 }
 
+.product-quic-details h3.my-3 {
+    height: 35px;
+    overflow: hidden;
+}
 
 span.sale-price {
     background: green;

@@ -8,7 +8,7 @@ const app = express();
 
 // env variable
 dotenv.config();
-const PORT = process.env.PORT || 5050;
+const PORT = process.env.PORT || 4040;
 
 // static folder 
 app.use(express.static("public"));

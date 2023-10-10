@@ -13,18 +13,26 @@
                 <img class="w-100 border m-0 rounded" style="height: 500px; object-fit: cover" src="/product_photo/<%= singleProduct.photo %>" alt="" />
               </div>
               <div class="product-quic-details">
-                <h3 class="my-3 mb-2"><%= singleProduct.name %></h3>
+                <div class="row align-items-center">
+                  <div class="col-lg-10">
+                    <h3 class="my-3 mb-2"><%= singleProduct.name %></h3>
 
-                <% if (!singleProduct.salePrice) { %>
-                <h5 class="regular-price my-2"><span>TK. </span><%= product.regularPrice %></h5>
-                <% } %> <% if (singleProduct.salePrice) { %>
+                    <% if (!singleProduct.salePrice) { %>
+                    <h5 class="regular-price my-2"><span>TK. </span><%= singleProduct.regularPrice %></h5>
+                    <% } %> <% if (singleProduct.salePrice) { %>
 
-                <h5 class="regular-price my-2 position-relative">
-                  <span>TK. </span> <del class="text-danger"><%= singleProduct.regularPrice %></del>
-                  <span class="sale-price my-2"><%= singleProduct.salePrice %></span>
-                </h5>
+                    <h5 class="regular-price my-2 position-relative">
+                      <span>TK. </span> <del class="text-danger"><%= singleProduct.regularPrice %></del>
+                      <span class="sale-price my-2"><%= singleProduct.salePrice %></span>
+                    </h5>
 
-                <% } %>
+                    <% } %>
+                  </div>
+                  <div class="col-lg-2">
+                    <a href="#" class="btn btn-primary w-100 mt-4">Add to cart</a>
+                    <p class="text-muted" style="font-size: 14px;">Available Stock: <%= singleProduct.stock %></p>
+                  </div>
+                </div>
               </div>
               <hr />
               <p class="product-discription mt-3">
@@ -49,11 +57,6 @@
                 laoreet nisl ac, auctor neque. Vivamus ipsum metus, scelerisque vitae accumsan sit amet, cursus eu est. Mauris sit amet libero vulputate, mollis
                 arcu ut, semper tellus. Etiam eleifend lacus ac sagittis blandit.
               </p>
-
-              <div class="order-now-buttton d-flex gap-3 w-75">
-                <a href="#" class="btn btn-primary w-100 mt-3">Add to cart</a>
-                <a href="#" class="btn btn-warning w-100 mt-3">Direct checkout</a>
-              </div>
             </div>
           </div>
         </div>

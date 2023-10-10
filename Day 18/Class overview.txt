@@ -1,0 +1,44 @@
+Class 18
+-----------------------
+Part 1 - Talk about sms services ( https://bulksmsbd.com ) , ( VONAGE )
+       - Sending SMS Using BULKSMSBD
+
+Part 2 -  Sending SMS Using VONAGE
+
+Part 3 - Talk about file uploading ( Multer ) 
+       - Create a server 
+       - install multer ( npm install multer ) 
+       - Form data submite with Photo
+
+
+Part 4 - Form submissions with single and multiple photos, and use multer to maintain their formality
+       - multer single 
+       - multer array
+       - multer fields
+       - filefilter ( file type filter ) 
+       - limites ( file limite ) 
+
+
+
+Part 5  - This part is VVI
+	- Product upload
+	- View all product
+	- View single product
+	- Delete product 
+	- Store product in jsonDB
+
+Part 6  - Ejs
+	- Install ejs ( npm install ejs ) 
+	- Setup ejs on server.js [ app.set("view-engine", "ejs");
+	- Ejs Basic 
+	
+---------------------------------
+
+Part 7 - Design product dashbord, add product page, product singel page 
+
+Part 8 - napm install express-ejs-layouts
+       - How to user ejs layout ( easy )
+
+Part 9 - Dashbord, Single page, Edit, Delete dynamic
+
+Part 10 - Project upload on live server ( rander server ) 
