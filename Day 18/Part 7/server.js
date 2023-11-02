@@ -3,6 +3,7 @@ import colors from "colors";
 import dotenv from "dotenv"
 import product from "./routes/product.js"
 import expressEjsLayouts from "express-ejs-layouts";
+import { connectDB } from "./config/mongodb.js";
 // init express
 const app = express();
 
@@ -26,5 +27,6 @@ app.use(product)
 
 // app listen
 app.listen(PORT, () => {
+  connectDB();
   console.log(`Server is running on port ${PORT}`.bgMagenta);
 });
