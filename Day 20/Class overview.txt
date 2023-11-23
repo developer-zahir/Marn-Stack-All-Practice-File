@@ -1,0 +1,38 @@
+Part 1  - Custom static method
+	- Custom quary method 
+	- Anothr way update data ( using mongosh method ) 
+	- And more
+
+
+Part 2  - Another way create / add data
+	- Middleware 
+	- Show message after and before save data 
+
+
+
+Part 3  - What is rest api
+	- How to create rest api
+	- How to send response profesonal way
+	- Password hash using bcrypt ( npm install bcrypt ) [ Easy ] 
+	- Rest full api
+
+
+Part 4  - JSON Web token  ( https://jwt.io ) 
+	- Follow the Json web token note that provides asraful sir ( easy topic ) 
+
+// Example of JWT creation 
+const token = jwt.sign({name, email}, process.env.JWT_SECRET, {
+	expiresIN: "10s",
+})
+
+
+
+Part 5  - Error handeling 
+	- npm install express-async-handler 
+	- easy 
+
+
+
+Part 6  - authentication and Authorization 
+	- Easy but dekhte hobe ( onek kichu sekhar ache ) 
+

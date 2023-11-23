@@ -9,3 +9,4 @@ export const mongodbConnection = async () => {
     console.error("MongoDB connection failed:".bgRed);
   }
 };
+

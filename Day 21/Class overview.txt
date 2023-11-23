@@ -1,0 +1,53 @@
+Part 1  - About react js
+
+
+Part 2  - Create react app ( npx create-react-app . ) ( old approach ) 
+	- React basic idea 💡 
+
+Part 3  - Verify token ( not react topic ) 
+	
+Part 4  - Create react app using new approach 
+	- npm create vite@latest
+	  - Freamwork : React
+	  - Variant : JavaScript + SWC 
+	  - npm run dev 
+	- Folder stacture 
+	- src
+	  - components
+	  - context
+	  - faker
+	  - helpers
+	  - hooks
+	  - pages
+	  - redux
+	  - router
+	  - utils
+
+
+
+
+Part 5  - How to work component 
+	- How to write css in jsx file ( inline css ) 
+	- Extranal css
+	- Module css 
+	- Condition and map loop in jsx file ( mojar jinish ) 
+	- How to use event handeller in jsx file 
+
+
+Part 6  - How to load image in jsx file 
+	- Team member section design and dynamic using react component
+
+
+Part 7  - Create new project 
+	- Install bootstrap ( npm install bootstrap ) 
+	- Link bootstrap in main.jsx file 
+	- Install RRD ( npm install react-router-dom ) For React routing system 
+	- How to create router ( easy ) 
+	- How to create header and footer and complete a simple project ( easy and interesting class ) 
+
+ 
+
+Part 8  - Class topic State change 
+	- easy and interesting class 
+
+
