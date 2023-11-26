@@ -1,0 +1,54 @@
+
+.admin-page-title{
+    box-shadow: var(--shadow);
+    padding: 20px 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.dashbord-section{
+    padding: 50px 0;
+    background: #0e5f3923;
+    .container{
+        display: flex;
+        gap: 20px;
+    }
+    .dashbord-left{
+        width: 20%;
+        ul {
+            background-color: var(--primary);
+            li {
+                
+                span{
+                   position: relative;
+                   top: 2px;
+                }
+                a{
+                    display: block;
+                    padding: 15px;
+                    color: var(--white);
+                    border-bottom: 1px solid #dddddd85;
+                    transition: .4s;
+                    &:hover{
+                        background-color: var( --primary-hover);
+                    }
+            }
+            .active{
+                background-color: var( --primary-hover);
+            }
+    
+            }
+        }
+    }
+  
+    .dashbord-right {
+        width: 80%;
+        .right-inner{
+            background-color: var(--white);
+            padding: 20px;
+            
+        }
+    }
+}
