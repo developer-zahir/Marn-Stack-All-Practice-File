@@ -1,0 +1,34 @@
+Part 1  - New Project create 
+	- npm install bootstrap 
+	- Alart component create 
+	- Dynamic alart using props/attribute 
+	- children ( fixed props ) 
+	- Hide/Show alart base on state/condition 
+	
+	- Dynamic card using props/attribute 
+
+
+Part 2  - Counder with condition 
+	- Use case of React developer tools ( Google chorom extension )
+	- Bloge page dynamic 
+	- 1, 2 Class Onek kichu sekhar ache 
+
+
+Part 3  - How to create Header, Footer, and Layout
+	- Router setup 
+
+
+
+Part 4  - New Project setup using Yarn 
+	- Install Sass ( npm/yarn sass ) 
+	- All necessary page create 
+	- Router sertup 
+	- Public and Private route setup 
+
+
+	- How to use react icon 
+	- React helmate 
+	- Use location Hook - use case 
+	
+
+................ onek kichu sekhar ache class 4 theke .....................
