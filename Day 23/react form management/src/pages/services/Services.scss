@@ -1,0 +1,47 @@
+.services {
+    text-align: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+  }
+  
+  .services-title {
+    margin-bottom: 30px;
+  
+    h2 {
+      font-size: 2em;
+      margin: 0;
+    }
+  
+    p {
+      color: #777;
+    }
+  }
+  
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  
+    .service-box {
+      background-color: #fff;
+      padding:70px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+      .icon {
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+  
+      h3 {
+        font-size: 1.5em;
+        margin: 0;
+      }
+  
+      p {
+        color: #555;
+      }
+    }
+  }
+  
+ 
